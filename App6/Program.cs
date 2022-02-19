@@ -13,16 +13,16 @@ namespace App6
             Console.Write("Введите предложение:");
             string s = Console.ReadLine();
             string[] str = s.Split(new Char[] { ' ', ',', '.', ':', '!', '?', ';' }, StringSplitOptions.RemoveEmptyEntries);
-            int maxlen = 0, index = 0;
+            int maxlength = 0, index = 0;
             for (int i = 0; i < str.Length; i++)
             {
-                if (str[i].Length > maxlen)
+                if (str[i].Length > maxlength)
                 {
-                    maxlen = str[i].Length;
+                    maxlength = str[i].Length;
                     index = i;
                 }
             }
-            Console.Write("Самое длинное слово состоит из " + maxlen + " " + "букв");
+            Console.Write("Самое длинное слово состоит из " + maxlength + " " + "букв");
             Console.ReadKey();
         }
     }
